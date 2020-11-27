@@ -1,0 +1,65 @@
+{
+  "name": "electron-snek-miner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This serves as an entry point to future NodeJS Express projects.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "build-installer": "electron-builder",
+  },
+  "build": {
+    "appId": "com.kleberbaum.miner",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "uninstallDisplayName": "SNEK ipfs and ethereum miner",
+      "license": "LICENSE",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snek-at/miner.git"
+  },
+  "keywords": [],
+  "author": "SNEK",
+  "license": "(EUPL-1.2)",
+  "bugs": {
+    "url": "https://github.com/snek-at/miner/issues/new?template=bug_report.md"
+  },
+  "homepage": ".",
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "install": "^0.13.0",
+    "ipfs-api": "^26.1.2",
+    "ipfs-core": "^0.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.1",
+    "npm": "^6.14.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "request": "^2.88.2",
+    "snek-client": "file:snek-client-0.2.0-rc.8.tgz",
+    "snek-intel": "file:snek-intel-0.2.0.tgz",
+    "web3": "^1.3.0",
+    "web3-eth-miner": "^2.0.0-alpha.1"
+  }
+}
